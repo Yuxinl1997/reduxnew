@@ -1,2 +1,2 @@
-# reduxnew
+# redux
 Created with CodeSandbox
