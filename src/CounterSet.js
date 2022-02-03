@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { incAction, decAction, oddAction, asyncAction } from "./action";
+import * as action from "./action";
 import "./styles.css";
 
 class CounterSet extends React.Component {
@@ -22,10 +22,10 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  incrementHandler: () => dispatch(incAction()),
-  decrementHandler: () => dispatch(decAction()),
-  oddHandler: () => dispatch(oddAction()),
-  asyncHandler: () => setTimeout(() => dispatch(asyncAction()), 1000)
+  incrementHandler: () => dispatch(action.incAction()),
+  decrementHandler: () => dispatch(action.decAction()),
+  oddHandler: () => dispatch(action.oddAction()),
+  asyncHandler: () => setTimeout(() => dispatch(action.asyncAction()), 1000)
 });
 
 const ConnectedCounterSet = connect(
