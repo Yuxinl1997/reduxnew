@@ -53,7 +53,6 @@ const deleteItem = (index) => {
   return {
     type: "DELETE",
     index
-    //这个是照着别人写的 为啥不能写payload？？？
   };
 };
 
